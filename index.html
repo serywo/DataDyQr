@@ -55,8 +55,7 @@
         if(k){ 
             fetch(AS_URL_BASE+'?k='+k)
             .then(r => r.text())
-            .then((r) => {
-                console.log(5 + 6);
+            .then((r) => {                
                 console.log(r);                
                 document.write(r);
                 if(r){
