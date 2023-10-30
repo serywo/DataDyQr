@@ -47,7 +47,7 @@
      <script>
         const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbx-t8p65IwffjFD-ND5A38eQo60EQV55Y6J2JPCiUCmoqJMZGnI4aAj29tZCkf33ACt/exec";
         var url = document.location.href;
-        var k = url.substr(url.lastIndexOf("k=")+2);
+        var k = url.substr(url.lastIndexOf("k=")+1);
         console.log("url: ",url);
 	console.log("k: ",k);
 	console.log("as: ",AS_URL_BASE);
@@ -56,7 +56,7 @@
            fetch(AS_URL_BASE+'?k='+k)
 	   .then(r => r.text())
            .then((r) => {
-	      document.write(r);
+	      console.log("valor de As luego de fetch",AS_URL_BASE);
               console.log(r);
               if(r){
                  document.location.replace(r);
