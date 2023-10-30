@@ -14,7 +14,7 @@
            width: 80px;
            height: 80px;
          }
-	       .lds-ring div {
+	.lds-ring div {
             box-sizing: border-box;
             display: block;
             position: absolute;
@@ -26,7 +26,7 @@
             animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
             border-color: #fff transparent transparent transparent;
           }
-	        .lds-ring div:nth-child(1) {
+	  .lds-ring div:nth-child(1) {
             animation-delay: -0.45s;
           }
           .lds-ring div:nth-child(2) {
@@ -42,14 +42,15 @@
             100% {
               transform: rotate(360deg);
             }
-          }  
-        
      </style>
   <body>
      <script>
         const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbx-t8p65IwffjFD-ND5A38eQo60EQV55Y6J2JPCiUCmoqJMZGnI4aAj29tZCkf33ACt/exec";
         var url = document.location.href;
         var k = url.substr(url.lastIndexOf("k=")+2);
+        console.log("url: ",url);
+	console.log("k: ",k);
+	console.log("as: ",AS_URL_BASE);
 
         if(k){
            fetch(AS_URL_BASE+'?k='+k)
